@@ -6,7 +6,7 @@ import React from "react";
 const LoadingFallback = () => <div className="min-w-screen min-h-screen bg-gray-100/70  flex justify-center items-center">
     <Loader2 className="animate-spin text-blue-500" />
 </div>;
-const Index = React.lazy(() => import("../features/client/Index"));
+const Home = React.lazy(() => import("../features/client/home/Home"));
 const Layout = React.lazy(() => import("../shared/layout/Layout"));
 
 const withSuspense = (Component: React.ReactNode) => (
@@ -21,11 +21,11 @@ export const ClientRoutes: RouteObject[] = [
         children: [
             {
                 index: true,
-                element: withSuspense(<Index />),
+                element: withSuspense(<Home />),
             },
             {
-                path: "notice",
-                element: withSuspense(<Index />),
+                path: "home",
+                element: withSuspense(<Home />),
             }
         ]
     },
