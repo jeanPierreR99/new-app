@@ -30,7 +30,7 @@ const otherNews = [
 
 const SectionNotice = () => {
     return (
-        <section className="p-6 space-y-6">
+        <section className="p-6 space-y-6 pt-24">
             <div className="border-l-4 border-[#009649] pl-4">
                 <h2 className="text-2xl font-bold text-[#009649] tracking-tight">📰 Noticias recientes</h2>
             </div>
@@ -56,13 +56,13 @@ const SectionNotice = () => {
                     {otherNews.map((item, index) => (
                         <Card
                             key={index}
-                            className="flex-row overflow-hidden cursor-pointer h-[150px] p-0 shadow-none border rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                            className="flex-row overflow-hidden cursor-pointer h-[150px] p-0 shadow-none rounded-none border-none  transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
                         >
                             <Link to={`/noticia/${index}`} className="flex flex-row gap-2">
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-34 h-full object-cover rounded-l-xl"
+                                    className="w-34 h-full object-cover"
                                 />
                                 <CardContent className="py-4 px-2">
                                     <CardTitle className="text-sm font-semibold mb-1 line-clamp-2">{item.title}</CardTitle>

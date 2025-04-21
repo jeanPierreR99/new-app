@@ -18,23 +18,13 @@ const news = [
         description: "Productores y cocineros locales participarán en una feria gastronómica para impulsar la economía local.",
         image: "https://cdn.www.gob.pe/uploads/document/file/7717140/standard_1119928-480770830_1034675208695967_3002238943827089583_n.jpg",
     },
-    {
-        title: "Nueva planta de reciclaje en funcionamiento",
-        description: "Se pone en marcha una moderna planta de reciclaje que procesará hasta 10 toneladas diarias.",
-        image: "https://cdn.www.gob.pe/uploads/document/file/7717140/standard_1119928-480770830_1034675208695967_3002238943827089583_n.jpg",
-    },
-    {
-        title: "Concurso de arte para jóvenes talentos",
-        description: "Jóvenes de entre 12 y 20 años podrán participar en un concurso de arte organizado por la municipalidad.",
-        image: "https://cdn.www.gob.pe/uploads/document/file/7717140/standard_1119928-480770830_1034675208695967_3002238943827089583_n.jpg",
-    },
 ];
 
 const CardEvent = () => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
             {news.map((item, index) => (
-                <Card key={index} className="flex flex-col p-0 pb-2 justify-between shadow-md rounded-2xl border overflow-hidden">
+                <Card key={index} className="flex flex-col p-0 pb-2 gap-4  overflow-hidden border-none shadow-none rounded-none transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                     <img
                         src={item.image}
                         alt={item.title}

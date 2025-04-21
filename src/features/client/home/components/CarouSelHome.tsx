@@ -60,7 +60,7 @@ const CarouselHome = () => {
 
     return (
         <div
-            className="w-full bg-[#009649] h-[60vh]"
+            className="w-full bg-[#009649] h-[500px] md:h-[60vh]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -74,14 +74,14 @@ const CarouselHome = () => {
                     style={{ transform: `translateX(-${current * 100}%)` }}
                 >
                     {news.map((item, index) => (
-                        <CarouselItem key={index} className="basis-full h-[60vh]">
+                        <CarouselItem key={index} className="basis-full h-[500px] md:h-[60vh]">
                             <div className="overflow-hidden flex flex-col md:flex-row h-full">
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-6/12 md:w-7/12 h-full object-fill"
+                                    className="w-full md:w-7/12 h-full object-fill"
                                 />
-                                <div className="w-6/12 md:w-4/12 p-6 select-none flex flex-col justify-center">
+                                <div className="w-full md:w-4/12 p-6 select-none flex flex-col justify-center">
                                     <h3 className="font-bold text-xl mb-4 uppercase text-yellow-400">{item.title}</h3>
                                     <p className="text-base  text-white overflow-y-auto max-h-48">
                                         {item.description}
