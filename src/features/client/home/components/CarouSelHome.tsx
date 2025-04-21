@@ -70,7 +70,7 @@ const CarouselHome = () => {
                 className="relative"
             >
                 <CarouselContent
-                    className="transition-transform ease-in-out duration-500"
+                    className="transition-transform ease-in-out duration-500 -mx-4"
                     style={{ transform: `translateX(-${current * 100}%)` }}
                 >
                     {news.map((item, index) => (
