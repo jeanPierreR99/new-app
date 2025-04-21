@@ -60,7 +60,7 @@ const CarouselHome = () => {
 
     return (
         <div
-            className="w-full bg-white h-[60vh]"
+            className="w-full bg-[#009649] h-[60vh]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -75,15 +75,15 @@ const CarouselHome = () => {
                 >
                     {news.map((item, index) => (
                         <CarouselItem key={index} className="basis-full h-[60vh]">
-                            <div className="overflow-hidden bg-white flex flex-col md:flex-row h-full">
+                            <div className="overflow-hidden flex flex-col md:flex-row h-full">
                                 <img
                                     src={item.image}
                                     alt={item.title}
                                     className="w-6/12 md:w-7/12 h-full object-fill"
                                 />
-                                <div className="w-6/12 md:w-4/12 p-6 flex flex-col justify-center">
-                                    <h3 className="font-bold text-xl mb-4">{item.title}</h3>
-                                    <p className="text-base text-muted-foreground overflow-y-auto max-h-48">
+                                <div className="w-6/12 md:w-4/12 p-6 select-none flex flex-col justify-center">
+                                    <h3 className="font-bold text-xl mb-4 uppercase text-yellow-400">{item.title}</h3>
+                                    <p className="text-base  text-white overflow-y-auto max-h-48">
                                         {item.description}
                                     </p>
                                 </div>
@@ -93,8 +93,8 @@ const CarouselHome = () => {
                 </CarouselContent>
 
                 {/* Botones */}
-                <CarouselPrevious className="ml-20 z-[999]" onClick={handlePrev} />
-                <CarouselNext className="mr-20 z-[999]" onClick={handleNext} />
+                <CarouselPrevious className="ml-20 z-[999] cursor-pointer" onClick={handlePrev} />
+                <CarouselNext className="mr-20 z-[999] cursor-pointer" onClick={handleNext} />
             </Carousel>
         </div>
     );

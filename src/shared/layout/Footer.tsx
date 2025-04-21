@@ -14,7 +14,7 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
     return (
-        <footer className="bg-white mt-20 border-t text-sm text-muted-foreground">
+        <footer className="bg-white border-t text-sm text-muted-foreground">
             <div className="max-w-[1225px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-6">
                 {/* Logo + Institución */}
                 <Card className="bg-transparent shadow-none border-none">
